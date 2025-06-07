@@ -1,75 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jasa Maintenance Elektronik Profesional">
+    <meta name="description" content="Jasa Maintenance Elektronik Profesional oleh Masodien. Layanan perbaikan, pemeliharaan, dan konsultasi elektronik terpercaya.">
+    <meta property="og:title" content="MasodienTech - Maintenance Elektronik Profesional">
+    <meta property="og:description" content="Solusi terbaik untuk maintenance elektronik Anda.">
+    <meta property="og:type" content="website">
     <title>Maintenance Elektronik - Masodien</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+      body { font-family: 'Roboto', Arial, sans-serif; margin:0; padding:0; }
+      .btn { transition: background .3s, color .3s; }
+      .btn:hover { background: #333; color: #fff; }
+      .card { transition: transform .2s; }
+      .card:hover { transform: translateY(-5px) scale(1.02); box-shadow:0 4px 16px rgba(0,0,0,.13);}
+      nav ul { list-style:none; margin:0; padding:0; display:flex; gap:20px; }
+      nav ul li a { text-decoration:none; color:inherit; }
+      /* Responsive */
+      @media (max-width: 600px) {
+        nav ul { flex-direction:column; gap:10px; }
+        .container { padding: 0 10px; }
+      }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 class="logo">Masodien<span>Tech</span></h1>
+            <h1 class="logo" aria-label="MasodienTech Logo">Masodien<span>Tech</span></h1>
             <nav>
                 <ul>
-                    <li><a href="https://web.facebook.com/mas0dien">Tentang</a></li>
+                    <li><a href="https://web.facebook.com/mas0dien" target="_blank" rel="noopener">Tentang</a></li>
                     <li><a href="#services">Layanan</a></li>
-                    <li><a href="https://wa.me/62882008102200">Kontak</a></li>
+                    <li><a href="https://wa.me/62882008102200" target="_blank" rel="noopener">Kontak</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <h2>Solusi Profesional untuk Maintenance Elektronik</h2>
-        <p>Kami memberikan layanan terbaik untuk perbaikan dan pemeliharaan elektronik Anda.</p>
-        <a href="#contact" class="btn">Hubungi Kami</a>
-    </section>
+    <main>
+        <section class="hero">
+            <h2>Solusi Profesional untuk Maintenance Elektronik</h2>
+            <p>Kami memberikan layanan terbaik untuk perbaikan dan pemeliharaan elektronik Anda.</p>
+            <a href="#contact" class="btn">Hubungi Kami</a>
+        </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Tentang Saya</h2>
-            <p>Saya, Syaifudin, memiliki pengalaman lebih dari 10 tahun dalam bidang maintenance elektronik. Berkomitmen untuk memberikan layanan profesional, cepat, dan terpercaya.</p>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Layanan</h2>
-            <div class="card">
-                <h3>Perbaikan Elektronik</h3>
-                <p>Perbaikan perangkat elektronik rumah tangga dan industri.</p>
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Tentang Saya</h2>
+                <p>Saya, Syaifudin, memiliki pengalaman lebih dari 10 tahun dalam bidang maintenance elektronik. Berkomitmen untuk memberikan layanan profesional, cepat, dan terpercaya.</p>
             </div>
-            <div class="card">
-                <h3>Pemeliharaan Rutin</h3>
-                <p>Layanan pemeliharaan untuk memastikan perangkat Anda selalu dalam kondisi optimal.</p>
-            </div>
-            <div class="card">
-                <h3>Konsultasi Teknis</h3>
-                <p>Konsultasi tentang solusi terbaik untuk kebutuhan elektronik Anda.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Kontak</h2>
-            <form action="#" method="post">
-                <label for="name">Nama:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Pesan:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <button type="submit" class="btn">Kirim</button>
-            </form>
-        </div>
-    </section>
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Layanan</h2>
+                <div class="card">
+                    <h3>Perbaikan Elektronik</h3>
+                    <p>Perbaikan perangkat elektronik rumah tangga dan industri.</p>
+                </div>
+                <div class="card">
+                    <h3>Pemeliharaan Rutin</h3>
+                    <p>Layanan pemeliharaan untuk memastikan perangkat Anda selalu dalam kondisi optimal.</p>
+                </div>
+                <div class="card">
+                    <h3>Konsultasi Teknis</h3>
+                    <p>Konsultasi tentang solusi terbaik untuk kebutuhan elektronik Anda.</p>
+                </div>
+            </div>
+        </section>
 
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Kontak</h2>
+                <form id="contactForm" action="#" method="post" autocomplete="off">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required placeholder="Nama Anda">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Alamat Email">
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Pesan Anda"></textarea>
+                    <button type="submit" class="btn">Kirim</button>
+                    <div id="formMessage" style="color:green; margin-top:10px; display:none;">Pesan Anda telah terkirim!</div>
+                </form>
+            </div>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 MasodienTech. Semua Hak Dilindungi.</p>
     </footer>
+    <script>
+      // Form feedback
+      document.getElementById('contactForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        document.getElementById('formMessage').style.display = 'block';
+        setTimeout(function(){
+          document.getElementById('formMessage').style.display = 'none';
+          document.getElementById('contactForm').reset();
+        }, 3000);
+      });
+    </script>
 </body>
 </html>
-
